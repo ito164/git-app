@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @srticle.title %>
+</p>
+
+<p>
+  <strong>Suthor:</strong>
+  <%= @srticle.suthor %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @srticle.body %>
+</p>
+
+<%= link_to 'Edit', edit_srticle_path(@srticle) %> |
+<%= link_to 'Back', srticles_path %>

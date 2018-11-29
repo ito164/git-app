@@ -1,0 +1,32 @@
+<%= form_with(model: srticle, local: true) do |form| %>
+  <% if srticle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(srticle.errors.count, "error") %> prohibited this srticle from being saved:</h2>
+
+      <ul>
+      <% srticle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suthor %>
+    <%= form.text_field :suthor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
